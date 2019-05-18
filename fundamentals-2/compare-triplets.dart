@@ -4,17 +4,17 @@
  */
 
 /**
- * Linea de comandos.
- * Declaración de variables
- *  - Final
- *  - var
+ * Linea de comandos. *
+ * Declaración de variables *
+ *  - Final * 
+ *  - var *
  * Tipado y estructura de datos
- *  - List
- *  - Genericos
- *  - Map
+ *  - List *
+ *  - Genericos *
+ *  - Map *
  *  - Modificar lista
- *  - Enteros
- * Interpolación de valores
+ *  - Enteros *
+ * Interpolación de valores *
  * Funciones
  *  - Declaración
  * Control de flujo
@@ -22,12 +22,12 @@
  */
 
 void main() {
-  List<int> _firstInput = [17, 28, 30];
-  List<int> secondInput = [99, 16, 8];
   var iAmNull;
+  List<int> _firstInput = [17, 28, 30];
+  var secondInput = [99, 16, 8];
 
-  final List<int> results = compareTriplets(_firstInput, secondInput);
-  var results2;
+  final List<dynamic> results = compareTriplets(_firstInput, secondInput);
+  dynamic results2;
 
   results2 = compareTriplets(_firstInput, null);
 
@@ -36,18 +36,19 @@ void main() {
   print("Null is ${iAmNull}");
 }
 
-compareTriplets(List<int> a, b) {
-  var results = [];
+compareTriplets(List<int> alice, bob) {
+  var results = [0, 0];
 
-  if (a == null || b == null) {
+  if (alice == null || bob == null) {
     return results;
   }
 
-  a.asMap().forEach((index, alicePoint) {;
-    var bobPoint = b.elementAt(index);
+  for(var index = 0;index < alice.length; index++) {
+    var alicePoint = alice.elementAt(index);
+    var bobPoint = bob.elementAt(index);
 
     if (alicePoint == bobPoint) {
-      return;
+      continue;
     }
 
     if (alicePoint > bobPoint) {
@@ -55,8 +56,7 @@ compareTriplets(List<int> a, b) {
     } else {
       results[1] += 1;
     }
-
-  });
+  }
 
   return results;
 }
