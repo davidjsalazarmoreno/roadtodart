@@ -3,23 +3,6 @@
  * https://www.hackerrank.com/challenges/compare-the-triplets/problem
  */
 
-/**
- * Linea de comandos. *
- * Declaración de variables *
- *  - Final * 
- *  - var *
- * Tipado y estructura de datos
- *  - List *
- *  - Genericos *
- *  - Map *
- *  - Modificar lista
- *  - Enteros *
- * Interpolación de valores *
- * Funciones
- *  - Declaración
- * Control de flujo
- * valor null y operadores de comparación
- */
 
 void main() {
   var iAmNull;
@@ -27,6 +10,7 @@ void main() {
   var secondInput = [99, 16, 8];
 
   final List<dynamic> results = compareTriplets(_firstInput, secondInput);
+
   dynamic results2;
 
   results2 = compareTriplets(_firstInput, null);
@@ -60,3 +44,4 @@ compareTriplets(List<int> alice, bob) {
 
   return results;
 }
+
