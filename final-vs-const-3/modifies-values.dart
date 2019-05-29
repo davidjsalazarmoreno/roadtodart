@@ -10,5 +10,23 @@ class Car {
  * puede ser determinado en tiempo de compilación, es decir,
  * el objeto estará congelado y será totalmente inmutable
  */
-var myList = const [1,2,3];
+var unmodifiableList = const [1,2,3];
 var myCar = const Car();
+final finalButModifiable = [4,5,6];
+
+
+void main() {
+  /**
+   * Esto lanzará un error
+   */
+  // unmodifiableList.add(4);
+
+  /**
+   * Agrega otro número a la lista
+   */
+  finalButModifiable.add(4);
+
+  print(unmodifiableList);
+  print(finalButModifiable);
+
+}
