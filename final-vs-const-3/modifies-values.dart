@@ -2,6 +2,7 @@ class Car {
   final brand = 'BMW';
   final int engines = 2;
   // final date = new DateTime().now();
+  // const a = 5;
 
   const Car();
 }
@@ -14,6 +15,8 @@ class Car {
 var unmodifiableList = const [1,2,3];
 var myCar = const Car();
 final finalButModifiable = [4,5,6];
+// const z;
+// z = 8;
 
 
 void main() {
