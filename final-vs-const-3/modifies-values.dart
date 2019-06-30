@@ -15,9 +15,6 @@ class Car {
 var unmodifiableList = const [1,2,3];
 var myCar = const Car();
 final finalButModifiable = [4,5,6];
-// const z;
-// z = 8;
-
 
 void main() {
   /**
